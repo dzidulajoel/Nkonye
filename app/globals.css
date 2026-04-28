@@ -22,5 +22,49 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+ 
+:root {
+  --font-urbanist: "Urbanist", sans-serif;
+  --font-jost: "Jost", sans-serif;
+}
+
+body {
+  font-family: var(--font-jost);
+  font-size: 16px;
+  line-height: 1.6;
+  color: #111827;
+}
+
+/* Titres */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-urbanist);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Tailles des titres */
+h1 { font-size: 2.5rem; }  /* 40px */
+h2 { font-size: 2rem; }    /* 32px */
+h3 { font-size: 1.5rem; }  /* 24px */
+h4 { font-size: 1.25rem; } /* 20px */
+h5 { font-size: 1.125rem; }/* 18px */
+h6 { font-size: 1rem; }    /* 16px */
+
+/* Paragraphes */
+p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1em;
+}
+
+/* Texte secondaire */
+small {
+  font-size: 0.875rem;
+}
+
+/* Utilitaires */
+.text-lg { font-size: 1.125rem; }
+.text-sm { font-size: 0.875rem; }
+.text-xs { font-size: 0.75rem; }

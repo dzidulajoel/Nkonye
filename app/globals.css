@@ -24,47 +24,140 @@ body {
   color: var(--foreground);
 }
 
- 
+
 :root {
   --font-urbanist: "Urbanist", sans-serif;
   --font-jost: "Jost", sans-serif;
 }
 
 body {
-  font-family: var(--font-jost);
+  font-family: var(--font-jost); 
   font-size: 16px;
-  line-height: 1.6;
   color: #111827;
 }
 
 /* Titres */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-urbanist);
   font-weight: 700;
   line-height: 1.2;
 }
 
 /* Tailles des titres */
-h1 { font-size: 2.5rem; }  /* 40px */
-h2 { font-size: 2rem; }    /* 32px */
-h3 { font-size: 1.5rem; }  /* 24px */
-h4 { font-size: 1.25rem; } /* 20px */
-h5 { font-size: 1.125rem; }/* 18px */
-h6 { font-size: 1rem; }    /* 16px */
+h1 {
+  font-size: 2.5rem;
+}
+
+/* 40px */
+h2 {
+  font-size: 2rem;
+}
+
+/* 32px */
+h3 {
+  font-size: 1.5rem;
+}
+
+/* 24px */
+h4 {
+  font-size: 1.25rem;
+}
+
+/* 20px */
+h5 {
+  font-size: 1.125rem;
+}
+
+/* 18px */
+h6 {
+  font-size: 1rem;
+}
+
+/* 16px */
 
 /* Paragraphes */
 p {
-  font-size: 1rem;
-  line-height: 1.6;
-  margin-bottom: 1em;
+  font-size: 1.1rem;
 }
 
-/* Texte secondaire */
+/* Texte secondaire */ 
 small {
   font-size: 0.875rem;
 }
 
-/* Utilitaires */
-.text-lg { font-size: 1.125rem; }
-.text-sm { font-size: 0.875rem; }
-.text-xs { font-size: 0.75rem; }
+/* Utilitaires */ 
+.text-lg {
+  font-size: 1.125rem;
+}
+
+.text-sm {
+  font-size: 0.875rem;
+}
+
+.text-xs {
+  font-size: 0.75rem;
+}
+
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 9999px;
+  background-color: white;
+  opacity: 0.1;
+}
+
+/* 1er point */
+.dot1 {
+  animation: fill 1s forwards;
+}
+
+/* 2e point (attend 1s) */
+.dot2 {
+  animation: fill 1s forwards;
+  animation-delay: 1s;
+}
+
+/* 3e point (attend 2s) */
+.dot3 {
+  animation: fill 1s forwards;
+  animation-delay: 2s;
+}
+
+.dot4 {
+  animation: fill 1s forwards;
+  animation-delay: 3s;
+}
+.dot5 {
+  animation: fill 1s forwards;
+  animation-delay: 4s;
+}
+.dot6 {
+  animation: fill 1s forwards;
+  animation-delay: 5s;
+}
+
+.dot7 {
+  animation: fill 1s forwards;
+  animation-delay: 6s;
+}
+.dot8 {
+  animation: fill 1s forwards;
+  animation-delay: 7s;
+}
+
+/* animation principale */
+@keyframes fill {
+  0% {
+    opacity: 0.1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}

@@ -105,13 +105,12 @@ moderne.
 
 ## 13. Routes
 
-- Splash
-- login
-- Signup
-- Nkonye
+- Splash:Nkonye
+- login -> Nkonye/auth/login
+- Signup -> Nkonye/auth/signup
 - Nkonye/accueil
 - Nkonye/explorer
 - Nkonye/parametre
 - Nkonye/contribution
 - Nkonye/choisir
-- 
+  

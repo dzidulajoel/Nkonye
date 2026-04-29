@@ -1,11 +1,37 @@
-const page = () => {
+"use client";
+
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { colors } from "@/libs/color";
+import Image from "next/image";
+
+export default function Splash() {
+    const router = useRouter();
+
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            router.push("/nkonye/login");
+        }, 7500);
+
+        return () => clearTimeout(timer);
+    }, []);
+
     return (
-        <div>
-            <h1 className="text-3xl font-bold text-green-500">Welcome to My App</h1>
-            <span>Here, This Plateform you learn all about programming, Technical,Tips & Tricks, and Tutrorials With Programming Videos in Hindi Language.</span>
-            <p>Here, This Plateform you learn all about programming, Technical,Tips & Tricks, and Tutrorials With Programming Videos in Hindi Language.</p>
-        </div>
-    )
+        <>
+            <section className="flex flex-col items-center justify-center h-screen w-full gap-12 relative" style={{ backgroundColor: colors.brand.green }}>
+                <Image src="/icons/logo.png" alt="Nkonye Logo" width={70} height={70} />
+                <div className="flex justify-center items-center gap-3 absolute bottom-10">
+                    <div className="dot dot1"></div>
+                    <div className="dot dot2"></div>
+                    <div className="dot dot3"></div>
+                    <div className="dot dot4"></div>
+                    <div className="dot dot5"></div>
+                    <div className="dot dot6"></div>
+                    <div className="dot dot7"></div>
+                    <div className="dot dot8"></div>
+                </div>
+            </section>
+        </>
+    );
 }
 
-export default page

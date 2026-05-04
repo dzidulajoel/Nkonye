@@ -1,9 +1,8 @@
 "use client";
-
+import '@flaticon/flaticon-uicons/css/all/all.css';
 import { useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { colors } from "@/libs/color";
-import Image from "next/image";
 
 export default function Splash() {
     const router = useRouter();
@@ -19,8 +18,8 @@ export default function Splash() {
     return (
         <>
             <section className="flex flex-col items-center justify-center h-screen w-full gap-12 relative" style={{ backgroundColor: colors.brand.green }}>
-                <Image src="/icons/logo.png" alt="Nkonye Logo" width={70} height={70} />
-                <div className="flex justify-center items-center gap-3 absolute bottom-10">
+                <i className="fi fi-ss-fire-flame-curved text-8xl text-white"></i>
+                <div className="flex justify-center items-center gap-3 absolute bottom-14">
                     <div className="dot dot1"></div>
                     <div className="dot dot2"></div>
                     <div className="dot dot3"></div>

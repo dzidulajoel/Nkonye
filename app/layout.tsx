@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import RegisterServiceWorker from './register-sw';
 import './globals.css';
-import { Urbanist, Jost } from 'next/font/google';
+import { Urbanist, Jost, Inter } from 'next/font/google';
 import { colors } from '@/libs/color';
 
 const urbanist = Urbanist({
@@ -12,6 +12,11 @@ const urbanist = Urbanist({
 const jost = Jost({
     subsets: ['latin'],
     variable: '--font-jost',
+});
+
+const inter = Inter({
+    subsets: ['latin'],
+    variable: '--font-inter',
 });
 
 
@@ -47,7 +52,7 @@ export default function RootLayout({
                 {/* Favicon */}
                 <link rel="icon" href="/icons/icon-192x192.png" />
             </head>
-            <body className={`${urbanist.variable} ${jost.variable}`} style={{backgroundColor:colors.gray[50]}}>
+            <body className={`${urbanist.variable} ${jost.variable} ${inter.variable}`} style={{backgroundColor:"#fff"}}>
                 <RegisterServiceWorker />
                 {children}
             </body>

@@ -1,163 +1,183 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
+
+@font-face {
+    font-family: 'NowLight';
+    src: url('../public/fonts/Aileron-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'NowRegular';
+    src: url('../public/fonts/Aileron-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 
 body {
-  background: var(--background);
-  color: var(--foreground);
+    background: var(--background);
+    color: var(--foreground);
 }
-
 
 :root {
-  --font-urbanist: "Urbanist", sans-serif;
-  --font-jost: "Jost", sans-serif;
+    --font-urbanist: "Urbanist", sans-serif;
+    --font-jost: "Jost", sans-serif;
+    --font-inter: "Inter", sans-serif;
+    --font-info: 'NowLight', sans-serif;
+    --font-body: 'NowRegular', sans-serif;
 }
 
 body {
-  font-family: var(--font-jost); 
-  font-size: 16px;
-  color: #111827;
+    font-family: var(--font-body);
 }
 
-/* Titres */
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--font-urbanist);
-  font-weight: 700;
-  line-height: 1.2;
-}
 
-/* Tailles des titres */
+
 h1 {
-  font-size: 2.5rem;
+    font-family: var(--font-inter);
+    font-weight: 600;
+    font-size: 1.9rem;
 }
 
-/* 40px */
-h2 {
-  font-size: 2rem;
-}
 
-/* 32px */
 h3 {
-  font-size: 1.5rem;
+    font-size: 20px;
+    font-weight: 700;
 }
 
-/* 24px */
 h4 {
-  font-size: 1.25rem;
+    font-size: 18px;
+    font-weight: 700;
 }
 
-/* 20px */
 h5 {
-  font-size: 1.125rem;
+    font-size: 16px;
+    font-weight: 700;
 }
 
-/* 18px */
-h6 {
-  font-size: 1rem;
+input {
+    font-size: 16px;
 }
 
-/* 16px */
-
-/* Paragraphes */
 p {
-  font-size: 1.1rem;
+    font-size: 16px;
 }
 
-/* Texte secondaire */ 
-small {
-  font-size: 0.875rem;
+label {
+    font-family: var(--font-body);
+    font-size: 16px;
+    font-weight: 500;
 }
 
-/* Utilitaires */ 
-.text-lg {
-  font-size: 1.125rem;
-}
-
-.text-sm {
-  font-size: 0.875rem;
-}
-
-.text-xs {
-  font-size: 0.75rem;
-}
 
 .dot {
-  width: 10px;
-  height: 10px;
-  border-radius: 9999px;
-  background-color: white;
-  opacity: 0.1;
+    width: 10px;
+    height: 10px;
+    border-radius: 9999px;
+    background-color: white;
+    opacity: 0.1;
 }
 
-/* 1er point */
 .dot1 {
-  animation: fill 1s forwards;
+    animation: fill 1s forwards;
 }
 
-/* 2e point (attend 1s) */
 .dot2 {
-  animation: fill 1s forwards;
-  animation-delay: 1s;
+    animation: fill 1s forwards;
+    animation-delay: 1s;
 }
 
-/* 3e point (attend 2s) */
 .dot3 {
-  animation: fill 1s forwards;
-  animation-delay: 2s;
+    animation: fill 1s forwards;
+    animation-delay: 2s;
 }
 
 .dot4 {
-  animation: fill 1s forwards;
-  animation-delay: 3s;
+    animation: fill 1s forwards;
+    animation-delay: 3s;
 }
+
 .dot5 {
-  animation: fill 1s forwards;
-  animation-delay: 4s;
+    animation: fill 1s forwards;
+    animation-delay: 4s;
 }
+
 .dot6 {
-  animation: fill 1s forwards;
-  animation-delay: 5s;
+    animation: fill 1s forwards;
+    animation-delay: 5s;
 }
 
 .dot7 {
-  animation: fill 1s forwards;
-  animation-delay: 6s;
+    animation: fill 1s forwards;
+    animation-delay: 6s;
 }
+
 .dot8 {
-  animation: fill 1s forwards;
-  animation-delay: 7s;
+    animation: fill 1s forwards;
+    animation-delay: 7s;
 }
 
 /* animation principale */
 @keyframes fill {
-  0% {
-    opacity: 0.1;
-    transform: scale(1);
-  }
-  100% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
+    0% {
+        opacity: 0.1;
+        transform: scale(1);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1.2);
+    }
+}
+
+.box {
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
+}
+
+@layer base {
+
+    html,
+    .scroll-container {
+        scroll-behavior: smooth;
+        overflow: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+
+    html::-webkit-scrollbar,
+    .scroll-container::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+/* masque la scrollbar partout */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }
